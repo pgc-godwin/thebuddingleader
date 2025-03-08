@@ -1,0 +1,166 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body, .lightgreen {
+  background-color: rgb(244, 253, 246);
+}
+
+.hide {
+  display: none;
+}
+
+#next-event-btn {
+  background-color: #eda007;
+  font-size: 1rem;
+  border: 1px solid #c58504;
+  color: rgb(244, 253, 246);
+
+}
+
+#next-event-btn:hover {
+  background-color: #066102;
+  color: rgb(244, 253, 246)
+}
+
+.logo-wrap {
+  padding: 0;
+  margin: 0;
+  background-color: #9d6900;
+  width: 25%;
+
+}
+
+.icons:hover {
+  color:rgb(218, 255, 218);
+  font-size: 30px;
+}
+
+.icons:active {
+  color:rgb(190, 255, 190);
+  font-size: 30px;
+}
+
+#next-event-btn:active {
+  background-color: #066102;
+}
+
+
+
+.event-section {
+  padding: 15px;
+  margin: 0px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.thin-border {
+  border: 1px solid #d99201;
+}
+
+.yellow {
+  background-color: #d99201;
+  border: 2px solid #d99201
+}
+
+.thin-bottom-border {
+  border-bottom: 0.5px solid #d99201;
+
+}
+
+  .header {
+    background-color: #066102;
+    padding: 20px
+  }
+  
+  .navbar {
+    background-color: rgb(244, 253, 246);
+  
+  }
+  
+  .navbar a {
+    font-weight: bold;
+    
+  }
+
+
+  .carousel-fade .carousel-inner .carousel-item {
+    transition-duration: 1s;
+
+     /* Adjust the speed to your liking */
+  }
+
+  .section {
+    padding: 40px;
+    padding-bottom: 15px;
+    margin: 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .pad-bottom {
+    padding-bottom: 10px;
+  }
+  
+ 
+  
+  
+  
+  .footer {
+    background-color: #066102;
+    color: rgb(244, 253, 246);
+    padding: 3px;
+    margin-top: 30px;
+  }
+  
+
+
+.btm-line {
+  margin-top: 10px;
+  height: 1px;
+  width: 100%;
+  background-color: #066102;
+}
+
+.subsection-title {
+  background-color: #066102;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  width: 200px
+}
+.carousel-item {
+  max-height: 55vw;
+
+}
+/*
+  @media (max-width: 575px) {
+  .carousel-item {
+    max-height: 290px
+}}
+@media (min-width: 576px) and (max-width: 767px) {
+  .carousel-item {
+    max-height: 350px
+}}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-item {
+    max-height: 450px
+}}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-item {
+    max-height: 550px
+}}
+
+@media (min-width: 1200px) {
+  .carousel-item {
+    max-height: 650px
+}}
