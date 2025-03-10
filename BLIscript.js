@@ -17,7 +17,7 @@ const brainkrigSection = document.getElementById("brainkrig-register");
 const projectSection = document.getElementById("project-page");
 const partnershipPage = document.getElementById("partnership");
 const aboutUsPage = document.getElementById("about-us-page");
-const contactUsPage = document.getElementById("last-invisible-line");
+const contactUsPage = document.getElementById("contactSection");
 
 
 /* Wrong code
@@ -45,6 +45,8 @@ navBtn.addEventListener('click', (e)=> {
     if (!isClickInsideNavbar) {
     }
   });
+
+
 
 navBtn.addEventListener("click", ()=>navCase.classList.toggle("collapse"));
 
@@ -79,14 +81,16 @@ $(document).ready(function(){
 const collapseFooter = (e) => {
     e.preventDefault();
     document.getElementById("contact-us-collapsible").click();
+    window.scrollTo(0, document.body.scrollHeight)
     document.getElementById("last-invisible-line").scrollIntoView();
 };
+
 
 projectNav.addEventListener("click", (e)=>{
     e.preventDefault();
     homepageSection.classList.add("hide");
     aboutUsPage.classList.add("hide");
-    partnershipPage.classList.add("hide");
+    partnershipPage.classList.remove("hide");
     projectSection.classList.remove("hide");
     projectSection.scrollIntoView();
 });
@@ -129,10 +133,20 @@ partnershipNav.addEventListener("click", (e)=> {
 
 contactUsNav.addEventListener("click", (e)=>{
   e.preventDefault();
+  document.getElementById("contact-us-collapsible").click();
   homepageSection.classList.add("hide");
   aboutUsPage.classList.add("hide");
-  projectSection.classList.remove("hide");
-  partnershipPage.classList.add("hide");
-  collapseFooter;
+  projectSection.classList.add("hide");
+  partnershipPage.classList.remove("hide");
+  contactUsPage.classList.remove("collapse");
+  window.scrollTo(0, document.body.scrollHeight)
+
+ // document.getElementById("last-invisible-line").scrollIntoView()
 
 });
+
+document.getElementById("contact-us-collapsible").addEventListener("click", (e)=>{
+  e.preventDefault();
+  contactUsPage.classList.remove("collapse");
+  window.scrollTo(0, document.body.scrollHeight);
+  })
