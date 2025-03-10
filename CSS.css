@@ -103,20 +103,26 @@ body, .lightgreen {
 
   }
 
-  @media (min-width: 200px) and (max-width: 767px) {
+  @media (max-width: 575px) {
     .section {
-      width: 80vw
+      max-width: 80vw
+      
+  }}  
+
+  @media (min-width: 576px) and (max-width: 769px) {
+    .section {
+      max-width: 75vw
       
   }}  
   
   @media (min-width: 768px) and (max-width: 991px) {
     .section {
-      width: 70vw  
+      max-width: 70vw  
   }}
-  
+
   @media (min-width: 992px) {
     .section {
-      width: 60vw
+      max-width: 60vw
       
   }}
 
