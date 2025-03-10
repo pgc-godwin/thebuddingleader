@@ -18,7 +18,7 @@ const projectSection = document.getElementById("project-page");
 const partnershipPage = document.getElementById("partnership");
 const aboutUsPage = document.getElementById("about-us-page");
 const contactUsPage = document.getElementById("contactSection");
-
+const partnershipBtn = document.getElementById("partnership-btn");
 
 /* Wrong code
 navBtn.addEventListener('click', (e)=> {
@@ -150,3 +150,9 @@ document.getElementById("contact-us-collapsible").addEventListener("click", (e)=
   contactUsPage.classList.remove("collapse");
   window.scrollTo(0, document.body.scrollHeight);
   })
+
+
+  partnershipBtn.addEventListener("click", (event)=>{
+    event.preventDefault();
+     window.open("https://docs.google.com/forms/d/e/1FAIpQLSdGRIM32_UeWNT3H35fHpn2GPrc_a2jMzl5aD89tlOdRX4UBw/viewform?usp=sf_link)", "_blank")
+});
