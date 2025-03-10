@@ -94,7 +94,7 @@ body, .lightgreen {
      /* Adjust the speed to your liking */
   }
 
-  .section {
+  .s-section {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -104,24 +104,24 @@ body, .lightgreen {
   }
 
   @media (max-width: 575px) {
-    .section {
+    .s-section {
       max-width: 80vw
       
   }}  
 
   @media (min-width: 576px) and (max-width: 769px) {
-    .section {
+    .s-section {
       max-width: 75vw
       
   }}  
   
   @media (min-width: 768px) and (max-width: 991px) {
-    .section {
+    .s-section {
       max-width: 70vw  
   }}
 
   @media (min-width: 992px) {
-    .section {
+    .s-section {
       max-width: 60vw
       
   }}
