@@ -6,6 +6,7 @@ const acasyMoreInfoBtn = document.getElementById("acasym-more-info-btn");
 
 const closeModal = document.getElementById("close-modal");
 const registerBtn = document.getElementById("register-btn");
+const registerBtn2 = document.getElementById("register-btn2");
 const homepageNav = document.getElementById("home-page-nav");
 const brainkrigNav = document.getElementById("brainkrig-nav");
 const projectNav = document.getElementById("project-nav");
@@ -13,13 +14,16 @@ const partnershipNav = document.getElementById("partnership-nav");
 const aboutUsNav = document.getElementById("about-us-nav");
 const contactUsNav = document.getElementById("contact-us-nav");
 const homepageSection = document.getElementById("carousel-section");
-const brainkrigSection = document.getElementById("brainkrig-register");
+const brainkrigSection = document.getElementById("brainkrig-page");
 const projectSection = document.getElementById("project-page");
 const partnershipPage = document.getElementById("partnership");
 const aboutUsPage = document.getElementById("about-us-page");
 const contactUsPage = document.getElementById("contactSection");
 const partnershipBtn = document.getElementById("partnership-btn");
 const brainkrigBtn = document.getElementById("about-brainkrig-btn");
+const brainkrigBtn2 = document.getElementById("about-brainkrig-btn2");
+
+
 
 
 /* Wrong code
@@ -57,6 +61,7 @@ acasyMoreInfoBtn.addEventListener("click", (e)=>{
     homepageSection.classList.add("hide");
     aboutUsPage.classList.add("hide");
     partnershipPage.classList.add("hide");
+    brainkrigSection.classList.add("hide");
     projectSection.classList.remove("hide");
     projectSection.scrollIntoView();
     document.getElementById("close-modal").click();
@@ -67,6 +72,11 @@ acasyMoreInfoBtn.addEventListener("click", (e)=>{
 registerBtn.addEventListener("click", (event)=>{
     event.preventDefault();
      window.open("https://docs.google.com/forms/d/e/1FAIpQLScU3Bz8WoYnCpmbI07E8tXJwgME-joAe247LYiiFrFdZXvTmg/viewform?usp=dialog", "_blank")
+});
+
+registerBtn2.addEventListener("click", (event)=>{
+  event.preventDefault();
+   window.open("https://docs.google.com/forms/d/e/1FAIpQLScU3Bz8WoYnCpmbI07E8tXJwgME-joAe247LYiiFrFdZXvTmg/viewform?usp=dialog", "_blank")
 });
 
 $(document).ready(function () {
@@ -94,6 +104,7 @@ projectNav.addEventListener("click", (e)=>{
     e.preventDefault();
     homepageSection.classList.add("hide");
     aboutUsPage.classList.add("hide");
+    brainkrigSection.classList.add("hide");
     partnershipPage.classList.remove("hide");
     projectSection.classList.remove("hide");
     projectSection.scrollIntoView();
@@ -105,6 +116,7 @@ aboutUsNav.addEventListener("click", (e)=>{
     e.preventDefault();
     homepageSection.classList.add("hide");
     partnershipPage.classList.add("hide");
+    brainkrigSection.classList.add("hide");
     projectSection.classList.add("hide");
     aboutUsPage.classList.remove("hide");
     contactUsPage.classList.remove("collapse");
@@ -114,15 +126,22 @@ aboutUsNav.addEventListener("click", (e)=>{
 });
 
 brainkrigNav.addEventListener("click", (e)=>{
-    e.preventDefault();
-    registerBtn.click()
+  e.preventDefault();
+  homepageSection.classList.add("hide");
+  aboutUsPage.classList.add("hide");
+  projectSection.classList.add("hide");
+  partnershipPage.classList.remove("hide");
+  contactUsPage.classList.remove("collapse");
+  brainkrigSection.classList.remove("hide");
+  window.scrollTo(0, 0)
 });
 
 homepageNav.addEventListener("click", (e)=> {
   e.preventDefault();
   homepageSection.classList.remove("hide");
   aboutUsPage.classList.add("hide");
-  projectSection.classList.add("hide");
+    brainkrigSection.classList.add("hide");
+    projectSection.classList.add("hide");
   partnershipPage.classList.add("hide");
 
   homepageSection.scrollIntoView();
@@ -133,7 +152,8 @@ homepageNav.addEventListener("click", (e)=> {
 partnershipNav.addEventListener("click", (e)=> {
   e.preventDefault();
   homepageSection.classList.add("hide");
-  aboutUsPage.classList.add("hide");
+    brainkrigSection.classList.add("hide");
+    aboutUsPage.classList.add("hide");
   projectSection.classList.add("hide");
   partnershipPage.classList.remove("hide");
   partnershipPage.scrollIntoView();
@@ -146,7 +166,8 @@ partnershipNav.addEventListener("click", (e)=> {
 contactUsNav.addEventListener("click", (e)=>{
   e.preventDefault();
   document.getElementById("contact-us-collapsible").click();
-  homepageSection.classList.add("hide");
+    brainkrigSection.classList.add("hide");
+    homepageSection.classList.add("hide");
   aboutUsPage.classList.add("hide");
   projectSection.classList.add("hide");
   partnershipPage.classList.remove("hide");
@@ -163,9 +184,20 @@ brainkrigBtn.addEventListener("click", (e)=>{
   aboutUsPage.classList.add("hide");
   projectSection.classList.add("hide");
   partnershipPage.classList.remove("hide");
-  contactUsPage.classList.hide("collapse");
-  branikrigPage.classList.remove("hide");
-  window.scrollTo(0, document.body.scrollHeight)
+  contactUsPage.classList.remove("collapse");
+  brainkrigSection.classList.remove("hide");
+  window.scrollTo(0, 0)
+});
+
+brainkrigBtn2.addEventListener("click", (e)=>{
+  e.preventDefault();
+  homepageSection.classList.add("hide");
+  aboutUsPage.classList.add("hide");
+  projectSection.classList.add("hide");
+  partnershipPage.classList.remove("hide");
+  contactUsPage.classList.remove("collapse");
+  brainkrigSection.classList.remove("hide");
+  window.scrollTo(0, 0)
 });
 
 
@@ -180,6 +212,7 @@ document.getElementById("contact-us-collapsible").addEventListener("click", (e)=
     event.preventDefault();
      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdGRIM32_UeWNT3H35fHpn2GPrc_a2jMzl5aD89tlOdRX4UBw/viewform?usp=sf_link)", "_blank")
 });
+
 
 //BRAINKRIG PICTURE SLIDE
 let index = 0;
