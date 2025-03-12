@@ -19,6 +19,8 @@ const partnershipPage = document.getElementById("partnership");
 const aboutUsPage = document.getElementById("about-us-page");
 const contactUsPage = document.getElementById("contactSection");
 const partnershipBtn = document.getElementById("partnership-btn");
+const brainkrigBtn = document.getElementById("about-brainkrig-btn");
+
 
 /* Wrong code
 navBtn.addEventListener('click', (e)=> {
@@ -57,7 +59,9 @@ acasyMoreInfoBtn.addEventListener("click", (e)=>{
     partnershipPage.classList.add("hide");
     projectSection.classList.remove("hide");
     projectSection.scrollIntoView();
-    document.getElementById("close-modal").click()
+    document.getElementById("close-modal").click();
+    window.scrollTo(0, 0)
+
 });
 
 registerBtn.addEventListener("click", (event)=>{
@@ -93,6 +97,8 @@ projectNav.addEventListener("click", (e)=>{
     partnershipPage.classList.remove("hide");
     projectSection.classList.remove("hide");
     projectSection.scrollIntoView();
+    window.scrollTo(0, 0)
+
 });
 
 aboutUsNav.addEventListener("click", (e)=>{
@@ -100,9 +106,11 @@ aboutUsNav.addEventListener("click", (e)=>{
     homepageSection.classList.add("hide");
     partnershipPage.classList.add("hide");
     projectSection.classList.add("hide");
-
     aboutUsPage.classList.remove("hide");
+    contactUsPage.classList.remove("collapse");
     aboutUsPage.scrollIntoView();
+    window.scrollTo(0, 0)
+
 });
 
 brainkrigNav.addEventListener("click", (e)=>{
@@ -113,11 +121,13 @@ brainkrigNav.addEventListener("click", (e)=>{
 homepageNav.addEventListener("click", (e)=> {
   e.preventDefault();
   homepageSection.classList.remove("hide");
-  aboutUsPage.classList.remove("hide");
+  aboutUsPage.classList.add("hide");
   projectSection.classList.add("hide");
   partnershipPage.classList.add("hide");
 
   homepageSection.scrollIntoView();
+  window.scrollTo(0, 0)
+
 });
 
 partnershipNav.addEventListener("click", (e)=> {
@@ -127,6 +137,8 @@ partnershipNav.addEventListener("click", (e)=> {
   projectSection.classList.add("hide");
   partnershipPage.classList.remove("hide");
   partnershipPage.scrollIntoView();
+  window.scrollTo(0, 0)
+
 });
 
 
@@ -145,9 +157,21 @@ contactUsNav.addEventListener("click", (e)=>{
 
 });
 
+brainkrigBtn.addEventListener("click", (e)=>{
+  e.preventDefault();
+  homepageSection.classList.add("hide");
+  aboutUsPage.classList.add("hide");
+  projectSection.classList.add("hide");
+  partnershipPage.classList.remove("hide");
+  contactUsPage.classList.hide("collapse");
+  branikrigPage.classList.remove("hide");
+  window.scrollTo(0, document.body.scrollHeight)
+});
+
+
 document.getElementById("contact-us-collapsible").addEventListener("click", (e)=>{
   e.preventDefault();
-  contactUsPage.classList.remove("collapse");
+  contactUsPage.classList.toggle("collapse");
   window.scrollTo(0, document.body.scrollHeight);
   })
 
@@ -156,3 +180,24 @@ document.getElementById("contact-us-collapsible").addEventListener("click", (e)=
     event.preventDefault();
      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdGRIM32_UeWNT3H35fHpn2GPrc_a2jMzl5aD89tlOdRX4UBw/viewform?usp=sf_link)", "_blank")
 });
+
+//BRAINKRIG PICTURE SLIDE
+let index = 0;
+        showSlides(index);
+        
+        function changeSlide(n) {
+            showSlides(index += n);
+        }
+        
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n >= slides.length) index = 0;
+            if (n < 0) index = slides.length - 1;
+            
+            for (let slide of slides) {
+                slide.style.display = "none";
+            }
+            slides[index].style.display = "block";
+        }
+        
+        setInterval(() => changeSlide(1), 5000); // Auto slide every 3 seconds
