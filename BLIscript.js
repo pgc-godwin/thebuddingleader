@@ -22,6 +22,8 @@ const contactUsPage = document.getElementById("contactSection");
 const partnershipBtn = document.getElementById("partnership-btn");
 const brainkrigBtn = document.getElementById("about-brainkrig-btn");
 const brainkrigBtn2 = document.getElementById("about-brainkrig-btn2");
+const subscribeBtn = document.getElementById("subscribe-btn");
+
 
 
 
@@ -68,6 +70,12 @@ acasyMoreInfoBtn.addEventListener("click", (e)=>{
     window.scrollTo(0, 0)
 
 });
+
+subscribeBtn.addEventListener("click", (event)=>{
+  event.preventDefault();
+   window.open("https://www.youtube.com/@thebuddingleader", "_blank")
+});
+
 
 registerBtn.addEventListener("click", (event)=>{
     event.preventDefault();
