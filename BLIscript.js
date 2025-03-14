@@ -252,3 +252,37 @@ let index = 0;
         }
         
         setInterval(() => changeSlide(1), 5000); // Auto slide every 3 seconds
+
+
+
+
+
+
+        $(document).ready(function() {
+          $("#registrationForm").submit(function(event) {
+              event.preventDefault(); // Prevent default form submission
+  
+              let formData = {
+                  "submission[q1_schoolName]": $("#name").val(),
+                  "submission[q2_emailAddress]": $("#school_email").val(),
+                  "submission[q3_whatsappNumber]": $("#phone-number").val(),
+                  "submission[q4_schoolAddress]": $("#address").val()
+              };
+  
+              $.ajax({
+                  url: "https://api.jotform.com/form/250723385505052/submissions?apiKey=7c84151b2f6b143c3dd3a50eef175ee7",
+                  type: "POST",
+                  processData: false,
+                  contentType: false,
+                  data: formData,  // Sending as URL-encoded data
+                  success: function(response) {
+                      $("#responseMsessage").text("Registration successful!").css("color", "green");
+                      $("#registrationForm")[0].reset();
+                  },
+                  error: function(xhr) {
+                      $("#responseMessage").text("Error submitting form. Please check API Key and field names.").css("color", "red");
+                  }
+              });
+          });
+      });
+  

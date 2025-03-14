@@ -56,7 +56,7 @@
         <div style="width:100vw; margin: 0" >
             <div class="d-flex justify-content-between align-items-center">
             
-                <a href="#" id="logo-nav">
+                <a href="www.thebuddingleader.org">
                 <img src="https://i.ibb.co/hxGj1hwS/Logo.png" alt="Budding Leaders International Logo" class="logo">
                 </a>
 
@@ -145,14 +145,12 @@
                     </div>
                 </div>
                 <div class="row" style="margin: 2px">
-                    <p class="">
-                       We are thrilled to announce that the third edition of our Quiz, Debate and Spelling Bee competition is coming to Lagos! 
-                      <br><br>
+                    <p class="text-center">
+                        We are excited to invite every interested school in Lagos State to participate our upcoming academic event.<br><br>
                         This event is designed to empower students with knowledge,
-                        foster healthy competition, and provide valuable learning experiences that will benefit both your school and its students.<br><br>
-                      We cordially invite every school in Lagos to join us for a day of learning, growth and fun.
+                        foster healthy competition, and provide valuable learning experiences that will benefit both your school and its students.
                     </p>
-                    <button id="about-brainkrig-btn" class="btn btn-default mt-3 font-weight-bold mx-auto" style="background-color: #d99201; color: rgb(246, 255, 246)">Read more about BRAINKRIG3.0</button>
+                    <button id="about-brainkrig-btn" class="btn btn-default mt-3 mx-auto font-weight-bold" style="background-color: #d99201; color: rgb(246, 255, 246)">Read more about BRAINKRIG3.0</button>
                 
                 </div>
 
@@ -178,13 +176,13 @@
                     </div>
                 </div>
                 <div class="row" style="margin: 2px">
-                    <p class="">
+                    <p class="text-center">
                         We are conducting interviews with exceptional young individuals who have achieved remarkable milestones in various fields.<br>
                         Our goal is to inspire and motivate young people by sharing stories of success and personal growth of other young people.<br><br>
                         If you would like to inspire and share insights from your experience with other young people, please send <br>
                         <span class="font-weight-bold">"My Story"</span> to <a href="mailto:buddinglead@gmail.com" target="_blank">buddinglead@gmail.com</a>
                     </p>
-                    <button id="subscribe-btn" class="btn btn-default mt-3 font-weight-bold mx-auto" style="background-color: red; color: rgb(246, 255, 246)">Subscribe to our YouTube Channel</button>
+                    <button id="subscribe-btn" class="btn btn-default mt-3 mx-auto font-weight-bold" style="background-color: red; color: rgb(246, 255, 246)">Subscribe to our YouTube Channel</button>
                 
                 </div>
 
@@ -192,6 +190,37 @@
         </div> 
     </div>
 
+    <div class="container mt-4">
+        <div class="card p-4 shadow">
+            <h4 class="text-center mb-4">BrainKrig3.0 Registration Form</h4>
+            <form id="registrationForm">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">School Name</label>
+                        <input type="text" class="form-control" id="name" name="q1_schoolName" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="school_email">Email Address</label>
+                        <input type="email" class="form-control" id="school_email" name="q2_emailAddress" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="phone-number">WhatsApp Number</label>
+                        <input type="text" class="form-control" id="phone-number" name="q3_whatsappNumber" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="address">School Address</label>
+                        <input type="text" class="form-control" id="address" name="q4_schoolAddress" required>
+                    </div>
+                </div>
+
+                <button id="submit" type="submit" class="btn btn-success">Submit</button>
+            </form>
+            <p id="responseMessage" class="mt-3"></p>
+        </div>
+    </div>
 
 
 
