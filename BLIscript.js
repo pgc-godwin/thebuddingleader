@@ -253,6 +253,7 @@ let index = 0;
               formData.append("submission[emailAddress]", $("#input_4").val());
               formData.append("submission[whatsappNumber]", $("#input_5").val());
               formData.append("submission[schoolAdress]", $("#input_6").val());
+              console.log("Submitting Data:", Object.fromEntries(formData));
 
               $.ajax({
                   url: "https://api.jotform.com/form/250723385505052/submissions?apiKey=7c84151b2f6b143c3dd3a50eef175ee7",
