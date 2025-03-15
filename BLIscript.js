@@ -242,3 +242,31 @@ let index = 0;
         }
         
         setInterval(() => changeSlide(1), 5000); // Auto slide every 3 seconds
+
+
+        $(document).ready(function() {
+          $("#registrationForm").submit(function(event) {
+              event.preventDefault(); // Prevent default form submission
+
+              let formData = new FormData();
+              formData.append("submission[schoolName]", $("#input_3").val());
+              formData.append("submission[emailAddress]", $("#input_4").val());
+              formData.append("submission[whatsappNumber]", $("#input_5").val());
+              formData.append("submission[schoolAdress]", $("#input_6").val());
+
+              $.ajax({
+                  url: "https://api.jotform.com/form/250723385505052/submissions?apiKey=7c84151b2f6b143c3dd3a50eef175ee7",
+                  type: "POST",
+                  data: formData,
+                  processData: false,
+                  contentType: false,
+                  success: function(response) {
+                      $("#responseMessage").text("Registration successful!").css("color", "green");
+                      $("#registrationForm")[0].reset();
+                  },
+                  error: function(xhr) {
+                      $("#responseMessage").text("Error submitting form. Please try again.").css("color", "red");
+                  }
+              });
+          });
+      });
