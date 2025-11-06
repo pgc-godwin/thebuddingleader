@@ -227,34 +227,15 @@ document.getElementById("contact-us-collapsible").addEventListener("click", (e)=
   e.preventDefault();
   contactUsPage.classList.toggle("collapse");
   window.scrollTo(0, document.body.scrollHeight);
-  })
+});
 
-
-  partnershipBtn.addEventListener("click", (event)=>{
+partnershipBtn.addEventListener("click", (event)=>{
     event.preventDefault();
      window.open("https://docs.google.com/forms/d/e/1FAIpQLSdGRIM32_UeWNT3H35fHpn2GPrc_a2jMzl5aD89tlOdRX4UBw/viewform?usp=sf_link)", "_blank")
 });
 
 
 //BRAINKRIG PICTURE SLIDE
-let index = 0;
-        showSlides(index);
-        
-        function changeSlide(n) {
-            showSlides(index += n);
-        }
-        
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("slides");
-            if (n >= slides.length) index = 0;
-            if (n < 0) index = slides.length - 1;
-            
-            for (let slide of slides) {
-                slide.style.display = "none";
-            }
-            slides[index].style.display = "block";
-        }
-        
-        setInterval(() => changeSlide(1), 5000); // Auto slide every 3 seconds
+
 
 

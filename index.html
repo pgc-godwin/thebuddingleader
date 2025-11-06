@@ -6,12 +6,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Budding Leaders International empowers young minds with knowledge, skills, and leadership opportunities through education-focused projects like BrainKrig and ACASYM.">
+    <meta name="keywords" content="education, youth empowerment, leadership, BrainKrig, ACASYM, non-profit, Nigeria">
+
     <link rel="stylesheet" href="CSS.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</head>
 <style>
     .logo {
         width:100px;
@@ -56,7 +58,7 @@
         <div style="width:100vw; margin: 0" >
             <div class="d-flex justify-content-between align-items-center">
             
-                <a href="www.thebuddingleader.org">
+                <a href="https://thebuddingleader.org">
                 <img src="https://i.ibb.co/hxGj1hwS/Logo.png" alt="Budding Leaders International Logo" class="logo">
                 </a>
 
@@ -301,10 +303,10 @@
         </div>
 
 
-        <div class="slideshow-container mx-auto" style="border: 2px solid green; width: 100%">
-            <img class="slides" src="https://i.ibb.co/YBM8MBD8/DSC-9699.jpg" alt="Brainkrig photo">
+        <div class="slideshow-container mx-auto" style="border: 2px solid green; width: 100%; height: 40%">
+           <img class="slides" src="https://i.ibb.co/YBM8MBD8/DSC-9699.jpg" alt="Brainkrig photo">
             <img class="slides" src="https://i.ibb.co/VcTK1fMd/DSC-9596.jpg" alt="Brainkrig photo">
-            <img class="slides" src="https://i.ibb.co/zHHHwTmq/DSC-9796.jpg" alt="Brainkrig photo"/>
+            <img class="slides" src="https://i.ibb.co/zHHHwTmq/DSC-9796.jpg" alt="Brainkrig photo">
             <img class="slides" src="https://i.ibb.co/233Mg346/50581410-768949080128523-513349149941301248-n.jpg" alt="BrainKrig photo">
             <img class="slides" src="https://i.ibb.co/BHc9dZwv/51043300-768950436795054-4693087597285605376-n.jpg" alt="BrainKrig photo"> 
             <img class="slides" src="https://i.ibb.co/vvM3stWZ/50863657-768950756795022-5348597188312170496-n.jpg" alt="BrainKrig photo">
@@ -320,6 +322,34 @@
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
+<script>
+let slideIndex = 0;
+showSlide(slideIndex);
+
+// Manual controls
+function changeSlide(n) {
+  showSlide(slideIndex += n);
+}
+
+// Main slideshow display logic
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slides");
+  if (n >= slides.length) { slideIndex = 0 }
+  if (n < 0) { slideIndex = slides.length - 1 }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
+}
+
+// Auto-slide every 4 seconds
+setInterval(() => {
+  slideIndex++;
+  showSlide(slideIndex);
+}, 4000);
+</script>
 
         
 
@@ -580,7 +610,7 @@
                     </button> 
             
                     <!-- Collapsible Contact Section -->
-                    <div class="collapse mt-3" id="contactSection">
+                    <div class="mt-3" id="contactSection">
                         <p><span class="font-weight-bold">Office Address:</span><br>
                         1, Olele Street, Iyana-Ejigbo, Lagos State, Nigeria.
                         </p>
@@ -631,5 +661,22 @@
 
     <script src="BLIscript.js">
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  // Collapse mobile navbar after clicking a nav link
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        $('.navbar-collapse').collapse('hide');
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>
