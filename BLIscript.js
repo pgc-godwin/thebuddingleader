@@ -59,15 +59,16 @@ navBtn.addEventListener('click', (e)=> {
 navBtn.addEventListener("click", ()=>navCase.classList.toggle("collapse"));
 
 acasyMoreInfoBtn.addEventListener("click", (e)=>{
-    e.preventDefault();
-    homepageSection.classList.add("hide");
-    aboutUsPage.classList.add("hide");
-    partnershipPage.classList.add("hide");
-    brainkrigSection.classList.add("hide");
-    projectSection.classList.remove("hide");
-    projectSection.scrollIntoView();
-    document.getElementById("close-modal").click();
-    window.scrollTo(0, 0)
+        e.preventDefault();
+  homepageSection.classList.add("hide");
+  aboutUsPage.classList.add("hide");
+  projectSection.classList.add("hide");
+  partnershipPage.classList.remove("hide");
+  contactUsPage.classList.remove("collapse");
+  brainkrigSection.classList.remove("hide");
+  brainkrigSection.scrollIntoView();
+  document.getElementById("close-modal").click();
+  window.scrollTo(0, 0)
 
 });
 
@@ -110,13 +111,13 @@ const collapseFooter = (e) => {
 
 projectNav.addEventListener("click", (e)=>{
     e.preventDefault();
-    homepageSection.classList.add("hide");
-    aboutUsPage.classList.add("hide");
-    brainkrigSection.classList.add("hide");
-    partnershipPage.classList.remove("hide");
-    projectSection.classList.remove("hide");
-    projectSection.scrollIntoView();
-    window.scrollTo(0, 0)
+  homepageSection.classList.add("hide");
+  aboutUsPage.classList.add("hide");
+  projectSection.classList.add("hide");
+  partnershipPage.classList.remove("hide");
+  contactUsPage.classList.remove("collapse");
+  brainkrigSection.classList.remove("hide");
+  window.scrollTo(0, 0)
 
 });
 
