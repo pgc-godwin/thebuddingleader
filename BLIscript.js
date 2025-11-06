@@ -59,7 +59,8 @@ navBtn.addEventListener('click', (e)=> {
 navBtn.addEventListener("click", ()=>navCase.classList.toggle("collapse"));
 
 acasyMoreInfoBtn.addEventListener("click", (e)=>{
-        e.preventDefault();
+    
+    e.preventDefault();
   homepageSection.classList.add("hide");
   aboutUsPage.classList.add("hide");
   projectSection.classList.add("hide");
@@ -158,19 +159,6 @@ homepageNav.addEventListener("click", (e)=> {
 
 });
 
-document.getElementById("logo-nav").addEventListener("click", (e)=> {
-  e.preventDefault();
-  homepageSection.classList.remove("hide");
-  aboutUsPage.classList.add("hide");
-    brainkrigSection.classList.add("hide");
-    projectSection.classList.add("hide");
-  partnershipPage.classList.add("hide");
-
-  homepageSection.scrollIntoView();
-  window.scrollTo(0, 0)
-
-});
-
 partnershipNav.addEventListener("click", (e)=> {
   e.preventDefault();
   homepageSection.classList.add("hide");
@@ -256,5 +244,3 @@ let index = 0;
         }
         
         setInterval(() => changeSlide(1), 5000); // Auto slide every 3 seconds
-
-
